@@ -33,7 +33,7 @@ void generate_delete_sql(int id) {
 int main() {
     // Criando um exemplo de aluno
     Aluno aluno1 = {1, "Alice", "Engenharia", 21};
-    Aluno aluno2 = {2, "Bob", "Matemática", 23};
+    Aluno aluno2 = {2, "Bob", "Matemática", 25};
 
     // Gerando o comando SQL para inserção dos alunos
     printf("Comandos SQL de inserção:\n");
