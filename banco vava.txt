@@ -1,0 +1,90 @@
+use Valorant;
+show tables
+describe Times_Franquia_Americas
+
+create table Times_Franquia_Emea(
+ID int NOT NULL auto_increment primary KEY,
+Nome varchar(50),
+Anos_Franquia int,
+Ascension char(1) not null default 'N',
+check (Ascension in('N', 'S')) 
+);
+
+insert into Times_franquia_Emea(Nome, Anos_Franquia, Ascension) values
+('Apeks', 1, 'S'),
+('BBL Esports', 2, 'N'),
+('FNATIC', 2, 'N'),
+('FUT Esports', 2, 'N'),
+('Gentle Mates', 2, 'S'),
+('Giants', 1, 'N'),
+('Karmine Corp', 2, 'N'),
+('KOI', 2, 'N'),
+('Natus Vincere', 2, 'N'),
+('Team Heretics', 2, 'N'),
+('Team Liquid', 2, 'N'),
+('Team Vitality', 2, 'N');
+
+SELECT * FROM Times_Franquia_Emea
+
+SELECT * FROM Times_Franquia_Americas
+
+SELECT * FROM Times_Franquia_Apac
+
+SELECT * FROM Times_Franquia_China
+
+CREATE TABLE Times_Franquia_Apac(
+ID int not null auto_increment primary key,
+Nome varchar(50),
+Anos_Franquia int,
+Ascension char(1) not null default 'N',
+CHECK (Ascension in('N', 'S'))
+);
+
+SHOW VARIABLES LIKE 'datadir';
+
+
+Insert into Times_Franquia_Apac(Nome, Anos_Franquia, Ascension) values
+('Bleed Esports', 1, 'S'),
+('Detonation FocusMe', 2, 'N'),
+('DRX', 2, 'N'),
+('Gen.G', 2, 'N'),
+('Global Esports', 2, 'N'),
+('Paper Rex', 2, 'N'),
+('Rex Regum Qeon', 2, 'N'),
+('Sin Prisa Gaming', 1, 'S'),
+('T1', 2, 'N'),
+('TALON Esports', 2, 'N'),
+('Team Secret', 2, 'N'),
+('ZETA Division', 2, 'N');
+
+Create table Times_Franquia_China(
+ID int not null auto_Increment primary key,
+Nome varchar(50),
+Anos_Franquia int,
+Ascension char(1) not null default 'N',
+CHECK (Ascension in ('N', 'S'))
+);
+
+INSERT INTO Times_Franquia_China(Nome, Anos_Franquia, Ascension) values
+('All Gamers', 2, 'N'),
+('Bilibili Gaming', 2, 'N'),
+('Dragon Ranger Gaming', 1, 'S'),
+('EDward Gaming', 2, 'N'),
+('FunPlus Phoenix', 2, 'N'),
+('JD Gaming', 2, 'N'),
+('NOVA Esports', 2 , 'N'),
+('Trace Esports', 2, 'N'),
+('Titan Esports Club', 2, 'N'),
+('TYLOO', 2, 'N'),
+('Wolves Esports', 2, 'N'),
+('XLG Gaming', 1, 'S');
+
+Alter table Times_Franquia_Americas add column Logo blob;
+Alter table Times_Franquia_Apac add column Logo blob;
+Alter table Times_Franquia_Emea add column Logo blob;
+Alter table Times_Franquia_China add column Logo blob;
+
+ 
+
+
+
